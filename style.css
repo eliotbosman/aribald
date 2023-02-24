@@ -1,0 +1,163 @@
+body {
+    font-family: 'AUTHENTICSans';
+    font-weight: 2;
+    margin: 0;
+    height: 100vh;
+    background: rgb(248, 84, 84);
+}
+
+body, .underlay, marquee {
+    box-shadow: inset rgb(91, 250, 147) 0.25vw 0.25vh 2vw 0.5vh;
+}
+
+figcaption, a, h1, marquee, nav, footer{
+    color:rgb(217, 129, 251);
+}
+
+figcaption, a, nav, .description, h1, a:active, footer {
+    text-align: center;
+}
+
+footer {
+    bottom: 5vh;
+}
+
+.container {
+    z-index: 2;
+    position: absolute;
+}
+
+.underlay {
+    margin: 0;
+    position: fixed;
+    border-radius: 100vw;
+    left: 21.5vw;
+    width: 57.5vw;
+    height: 100vh;
+    background:rgb(179, 73, 255);
+    animation: snurra 2s linear infinite;
+
+}
+
+.arrow {
+    animation: snurra 6s linear infinite;
+    color: black;
+}
+
+audio { width: 10vw;}
+
+audio::-webkit-media-controls-panel {
+    background: rgb(248, 84, 84);
+    box-shadow: inset rgb(91, 250, 147) 0.25vw 0.25vh 2vw 0.5vh;
+}
+
+audio::-webkit-media-controls-mute-button, audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-timeline-container {
+    background-color: rgb(179, 73, 255);
+    border-radius: 10vw;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display{
+    color:rgb(179, 73, 255);
+}
+
+.radio {
+    background: rgb(248, 84, 84);
+    box-shadow: inset rgb(91, 250, 147) 0.25vw 0.25vh 2vw 0.5vh;
+    width: 10vw; height: 4vh;
+    border-radius: 2vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.dot {
+    top: 48.5vh;
+    left: 48.5vw;
+    width: 2.75vw;
+    height: 5vh;
+    background: rgb(248, 84, 84);
+        position: fixed;
+    border-radius: 100vw;
+    animation: snurra 6s ease-in-out infinite;
+
+}
+
+nav {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    -webkit-text-stroke-width: 1pt;
+}
+
+nav:hover {
+}
+
+marquee {
+    -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: rgb(217, 129, 251);
+    font-family: 'ABCMaxiRound';
+    font-size: 100pt;
+    border-radius: 10vw;
+    width: 50vw;
+}
+
+.description {
+    color:black;
+    font-size: 25pt;
+    margin-left: 25vw; margin-right: 25vw;
+    margin-top: -5vh; margin-bottom: 5vh;
+}
+
+.feature {
+    display: flex;
+}
+
+h1 { 
+    font-family: 'ABCMaxiRound';
+    font-size: 300pt;
+    margin: 0;
+}
+
+.header {
+    color: rgb(19, 19, 19);
+    font-size: 15pt;
+    margin-left: 2vw;
+    margin-top: -2.5vh;
+}
+
+small {
+    font-size: 10pt;
+}
+
+.grid {
+   display: none;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 2vw 2vh;
+   margin: 2%;
+}
+
+img {
+    min-width: 100vw; min-height: 100vh;
+
+}
+
+@keyframes snurra {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: 'ABCMaxiRound';
+    src: url('ABCMaxiRoundEdu-Light.woff2') format('woff2'),
+    url('ABCMaxiRoundEdu-Light.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'AUTHENTICSans';
+    src: url('AUTHENTICSans-60.woff2') format('woff2'),
+    url('AUTHENTICSans-60.woff') format('woff');
+}
